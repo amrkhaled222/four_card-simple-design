@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:hsl(0, 0%, 98%);
+}
+main{
+    width: 80%;
+    margin: auto;
+    font-family: Poppins;
+    color:hsl(234, 12%, 34%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content:center;
+    position: relative;
+}
+header{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin-top:50px;
+    height:123px
+}
+header div{
+ display: flex;
+ justify-content: center;
+ width:60%;
+}
+.small{
+    font-weight: 200;
+    font-size:14px;
+}
+.med{
+    font-weight:400;
+    font-size: 23px;
+}
+.larg{
+    font-size: 24px;
+    font-weight: 600;
+}
+header div{
+    text-align: center;
+}
+section{
+    display: grid;
+    grid-template-areas: "first sec third" "first sec third";
+    grid-template-columns: repeat(3,calc(100% / 3 - 20px));
+    grid-template-rows: repeat(2,200px);
+    gap: 70px 20px;
+    justify-content:center;
+    align-items: center;
+}
+
+
+section div{
+    background-color: white;
+    height: 250px;
+    border-radius: 10px 10px;
+    padding:20px;
+    border: 7px solid transparent;
+    box-shadow: 0px 3px 12px 1px hsl(229deg 6% 66% / 42%);
+    position: relative;
+    margin-top: 35px;
+
+}
+.sec_top{
+    display: block;
+    font-size:18px;
+    font-weight: 600;
+}
+section .small{
+    display: block;
+    font-size: 16px;
+    margin-top: 12px;
+   
+}
+section div:last-of-type{
+    grid-area: third;
+    border-top:3px solid hsl(212, 86%, 64%); 
+}
+section div:first-of-type{
+    grid-area: first;
+  border-top: 3px solid hsl(180, 62%, 55%) ;
+}
+section div:nth-child(2){
+    border-top: 3px solid hsl(0, 78%, 62%);
+}
+section div:nth-child(3){
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+img{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width:43px;
+    height:43px;
+}
+footer{
+    position:absolute ;
+    bottom:-90px
+}
+
+
+@media  screen and (max-width:978px) {
+    
+    main{
+        width: 100%;
+    }
+    header{width:87vw}
+    header div{
+        width: 90%;
+    }
+    header .small{
+        margin-top: 15px;
+    }
+    section{
+       display: flex;
+       justify-content:center;
+       flex-wrap: wrap;
+       width: 250px;
+        margin-top: 4vh;
+        gap:0px 20px;
+    }
+   section div{
+        width:250px;
+        height:200px;
+    }
+    
+}
